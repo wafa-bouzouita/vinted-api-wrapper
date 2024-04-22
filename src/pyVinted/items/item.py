@@ -11,10 +11,15 @@ class Item:
         try:
             self.size_title = data["size_title"]
         except:
-            self.size_title = data["size_title"]
+            self.size_title = 'N/A'
         self.currency = data["currency"]
         self.price = data["price"]
-        self.photo = data["photo"]["url"]
+        self.description = data["description"]
+        self.status = data["status"]
+        try:
+            self.photo = data["photo"]["url"]
+        except:
+            self.photo = 'N/A'
         self.url = data["url"]
         self.created_at_ts = datetime.fromtimestamp(
             data["photo"]["high_resolution"]["timestamp"], tz=timezone.utc
