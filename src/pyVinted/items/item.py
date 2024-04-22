@@ -14,7 +14,6 @@ class Item:
             self.size_title = 'N/A'
         self.currency = data["currency"]
         self.price = data["price"]
-        self.description = data["description"]
         self.status = data["status"]
         try:
             self.photo = data["photo"]["url"]
